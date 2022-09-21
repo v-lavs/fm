@@ -1679,9 +1679,16 @@ img.mfp-img {
 }
 
 .section-gallery {
+  position: relative;
   padding-top: 70px;
   padding-bottom: 178px;
   background-color: #023659;
+}
+
+.section-gallery:before {
+  position: absolute;
+  content: '';
+  display: block;
 }
 
 .section-gallery .title {
