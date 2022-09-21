@@ -1,0 +1,53 @@
+.footer {
+  padding: 45px 0 60px;
+  background-color: #00aeef;
+  color: rgba(255, 255, 255, .7);
+
+  .title_md {
+    color: #ffffff;
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.19;
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .part {
+    width: auto;
+    margin-bottom: 50px;
+  }
+
+  .opening {
+    margin-bottom: 37px;
+  }
+
+  .days {
+    margin-right: 25px;
+  }
+
+  .opening__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__wrap-btn {
+    text-align: center;
+  }
+}

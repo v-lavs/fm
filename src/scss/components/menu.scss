@@ -1,0 +1,21 @@
+.menu {
+  display: flex;
+
+  &__item {
+    opacity: 0.6;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 0.98px;
+    line-height: 1;
+    font-weight: 600;
+    margin-left: 46px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover, &:focus{
+      -webkit-text-stroke: .5px #ffffff;
+      opacity: .8;
+    }
+  }
+}
