@@ -87,16 +87,17 @@
     padding: 18px 10px 20px;
     min-width: 163px;
     z-index: 2;
-    left: 0;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
 
     &_top {
       top: -12px;
+      left: 0;
+      transform: translateX(-50%);
     }
 
     &_bottom {
-      bottom: 75px;
+      bottom: -34px;
+      left: 43%;
+      transform: translateX(100%);
     }
   }
 
@@ -131,5 +132,14 @@
 }
 
 @media screen and (max-height: 768px) {
-
+  .process-slide {
+    &__label_top {
+      transform: translateX(-15%);
+    }
+    &__label_bottom {
+      bottom: -20px;
+      left: -17%;
+      transform: translateX(100%);
+    }
+  }
 }
