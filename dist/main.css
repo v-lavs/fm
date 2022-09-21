@@ -1455,9 +1455,9 @@ img.mfp-img {
 
 .section-banner {
   position: relative;
-  padding-top: 18vh;
+  padding-top: 16vh;
   padding-bottom: 24px;
-  background: url(../assets/img/waves.svg) no-repeat 0 0, linear-gradient(-56deg, #28b0da 7%, #2390c2 35%, #1e67a2 78%, #1c5796 100%) no-repeat 0 0;
+  background: url(../assets/img/waves.svg) no-repeat 0 0, url(../assets/img/line1.svg) no-repeat left 16% top -40px, url(../assets/img/line2.svg) no-repeat left 60% top -40px, url(../assets/img/line3.svg) no-repeat right 19% top -40px, linear-gradient(-56deg, #28b0da 7%, #2390c2 35%, #1e67a2 78%, #1c5796 100%) no-repeat 0 0;
   text-align: center;
   align-items: flex-start;
   background-size: initial;
@@ -1521,6 +1521,8 @@ img.mfp-img {
 
 .section-banner .banner-img-wrap_5 {
   border-radius: 81px;
+  width: 298px;
+  height: 162px;
   right: 0;
   transform: translate(100%, 80%);
   top: 0;
@@ -1543,7 +1545,7 @@ img.mfp-img {
 
 .section-banner .title {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 52px;
   letter-spacing: 0.8px;
   line-height: 1.175;
   font-weight: 700;
@@ -1745,6 +1747,7 @@ img.mfp-img {
 
 .process-slide {
   border-radius: 16px;
+  height: 230px;
 }
 
 .process-slide:hover {
@@ -1775,7 +1778,7 @@ img.mfp-img {
   text-align: center;
   border-radius: 25px;
   color: rgba(255, 255, 255, 0.7);
-  padding: 15px 10px 17px;
+  padding: 18px 10px 20px;
   min-width: 163px;
   z-index: 2;
   left: 0;
@@ -1795,6 +1798,7 @@ img.mfp-img {
   position: relative;
   display: block;
   padding-top: 67%;
+  height: 100%;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -1918,5 +1922,31 @@ img.mfp-img {
 
   .container {
     max-width: 480px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .section-banner .btn_main {
+    margin-bottom: 50px;
+  }
+
+  .section-banner .banner-img-wrap_1 {
+    width: 150px;
+    height: 80px;
+  }
+
+  .section-banner .banner-img-wrap_2 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .section-banner .banner-img-wrap_3 {
+    width: 435px;
+    height: 238px;
+  }
+
+  .section-banner .banner-img-wrap_5 {
+    width: 266px;
+    height: 145px;
   }
 }

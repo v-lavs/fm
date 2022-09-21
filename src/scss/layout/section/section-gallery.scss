@@ -3,7 +3,8 @@
   padding-top: 70px;
   padding-bottom: 178px;
   background-color: #023659;
-  &:before{
+
+  &:before {
     position: absolute;
     content: '';
     display: block;
@@ -53,8 +54,10 @@
 
 .process-slide {
   border-radius: 16px;
+  height: 230px;
+
   &:hover {
-    box-shadow: 0 5px 14px 14px rgba(0,0,0,0.18);
+    box-shadow: 0 5px 14px 14px rgba(0, 0, 0, 0.18);
   }
 
   &:nth-of-type(odd) {
@@ -81,7 +84,7 @@
     text-align: center;
     border-radius: 25px;
     color: rgba(255, 255, 255, .7);
-    padding: 15px 10px 17px;
+    padding: 18px 10px 20px;
     min-width: 163px;
     z-index: 2;
     left: 0;
@@ -101,6 +104,7 @@
     position: relative;
     display: block;
     padding-top: 67%;
+    height: 100%;
     border-radius: 16px;
     overflow: hidden;
   }
@@ -124,4 +128,8 @@
   &:after {
     font-size: 12px;
   }
+}
+
+@media screen and (max-height: 768px) {
+
 }
