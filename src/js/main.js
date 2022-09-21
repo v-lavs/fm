@@ -17,12 +17,17 @@ $(document).ready(function () {
         speed: 900,
         centeredSlides: true,
         initialSlide: 2,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 26,
         navigation: {
             nextEl: "#slider-process-next",
             prevEl: "#slider-process-prev",
         },
+        breakpoints: {
+            993:{
+                slidesPerView: 3,
+            }
+        }
     });
 
     $.scrollify({

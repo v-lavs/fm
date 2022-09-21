@@ -1,5 +1,5 @@
 body {
-  font: 400 16px/1.54 $main-font;
+  font: 400 14px/1.54 $main-font;
   height: 100%;
   color: #72878e;
   font-feature-settings: 'pnum' on, 'lnum' on;
@@ -79,6 +79,12 @@ body {
       margin: 0 auto;
       vertical-align: middle;
     }
+  }
+}
+
+@include respond-to($md) {
+  .section{
+    min-height: 0;
   }
 }
 

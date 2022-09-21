@@ -22,6 +22,9 @@
   .d-flex {
     display: flex;
     justify-content: space-between;
+    max-width: 798px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .part {
