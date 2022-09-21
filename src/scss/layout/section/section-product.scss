@@ -1,41 +1,51 @@
 .section-product {
-  padding-top: 95px;
-  padding-bottom: 64px;
+  padding-bottom: 3.5vh;
+  position: relative;
   font-size: 13px;
   font-weight: 500;
-  background-repeat: no-repeat;
-  background-position: left -6px top -20px;
-  background-size: 490px 500px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background-image: url(../assets/img/bg-line-prod.svg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 51%;
+    top: 0;
+    bottom: 0;
+  }
 
   .title {
     margin-bottom: 55px;
   }
 
-  .part-left {
-    width: 45%;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain;
-    margin-bottom: 57px;
-    padding-left: 0;
-  }
-
   &__img-wrap {
-    min-width: 390px;
-    max-width: 437px;
-    padding: 29px 36px 48px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100%;
+    padding: 29px 48px 36px 0;
+
   }
 
   &__img {
     width: 100%;
-    height: auto;
+    max-width: 437px;
+    height: 100%;
   }
 
   &__description {
     position: relative;
     padding-left: 13px;
     padding-bottom: 16px;
-    margin-bottom: 38px;
+    margin-bottom: 62px;
     font-weight: 600;
 
     &:before {
@@ -53,7 +63,11 @@
 
   &:nth-of-type(odd) {
     background-color: #d9f0f9;
-    background-position: right -6px top -20px;
+
+    &:before {
+      left: -50%;
+      transform: scale(-1, 1);
+    }
 
     .packaging__item {
       background-color: #00aeef;
@@ -65,10 +79,20 @@
   display: flex;
 }
 
-.grid-layout__col {
-  width: 55%;
+.grid-layout__col-right {
+  width: 56%;
   padding-top: 30px;
   padding-left: 70px;
+  padding-bottom: 42px;
+}
+
+.grid-layout__col-left {
+  position: relative;
+  width: 44%;
+  min-height: 390px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
 }
 
 .packaging {
@@ -91,7 +115,8 @@
     background-color: #d9f0f9;
     //margin: 0 8px;
     margin-right: 16px;
-    &:last-child{
+
+    &:last-child {
       margin-right: 0;
     }
   }

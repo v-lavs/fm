@@ -13,12 +13,10 @@
 
 $(document).ready(function () {
     let sliderProcess = new Swiper(".slider-process", {
-        loop: true,
+        // loop: true,
         speed: 900,
-
         centeredSlides: true,
-        roundLengths: true,
-
+        initialSlide: 2,
         slidesPerView: 3,
         spaceBetween: 26,
         navigation: {
