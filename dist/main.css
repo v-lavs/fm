@@ -1490,35 +1490,28 @@ img.mfp-img {
 }
 
 .section-banner .banner-img-wrap_1 {
-  left: -70px;
-  transform: translateX(-100%);
+  left: -7px;
+  transform: translate(-100%, -100%);
   bottom: 43px;
   width: 168px;
   height: 91px;
   border-radius: 45px;
+  top: 35%;
 }
 
 .section-banner .banner-img-wrap_2 {
-  bottom: -40px;
-  left: -170px;
+  bottom: 55%;
+  left: -90px;
   transform: translate(-100%, 100%);
   border-radius: 50%;
   width: 174px;
   height: 174px;
 }
 
-.section-banner .banner-img-wrap_3 {
-  left: 50%;
-  transform: translate(-50%, 33%);
-  width: 496px;
-  height: 270px;
-  border-radius: 135px;
-}
-
 .section-banner .banner-img-wrap_4 {
-  right: -60px;
-  bottom: -96px;
-  transform: translate(170%, 140%);
+  right: -66px;
+  bottom: 0;
+  transform: translate(100%, -55%);
   border-radius: 50%;
   width: 111px;
   height: 110px;
@@ -1528,15 +1521,24 @@ img.mfp-img {
 
 .section-banner .banner-img-wrap_5 {
   border-radius: 81px;
-  right: -40px;
-  transform: translate(100%, -70%);
+  right: 0;
+  transform: translate(100%, 80%);
+  top: 0;
+}
+
+.section-banner .banner-img-wrap_3 {
+  position: static;
+  width: 496px;
+  height: 270px;
+  border-radius: 135px;
+  margin: 0 auto;
 }
 
 .section-banner__content {
   position: relative;
   width: 100%;
   margin: 0 auto;
-  max-width: 360px;
+  max-width: 500px;
 }
 
 .section-banner .title {
@@ -1546,6 +1548,10 @@ img.mfp-img {
   line-height: 1.175;
   font-weight: 700;
   margin: 0 auto 40px;
+}
+
+.section-banner .btn_main {
+  margin-bottom: 86px;
 }
 
 .section-product {
