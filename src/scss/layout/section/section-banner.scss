@@ -2,23 +2,35 @@
   position: relative;
   padding-top: 16vh;
   padding-bottom: 24px;
-  background: url(../assets/img/waves.svg) no-repeat 0 0,
-  linear-gradient(-56deg, #28b0da 7%, #2390c2 35%, #1e67a2 78%, #1c5796 100%) no-repeat 0 0;
+  background-image: linear-gradient(-56deg, #28b0da 7%, #2390c2 35%, #1e67a2 78%, #1c5796 100%);
   text-align: center;
   align-items: flex-start;
-  background-size: initial;
 
+  &:before,
   &:after {
     position: absolute;
     content: '';
     display: block;
+  }
+&:before{
+  width: calc(50% + 86px);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background-image: url(../assets/img/waves.svg);
+  background-position: right 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+  &:after {
     width: 204px;
     height: 204px;
     border: 90px solid #ffffff;
     opacity: 0.15;
     border-radius: 50%;
-    top: -0%;
-    right: -0%;
+    top: 0;
+    right: 0;
     transform: translate(50%, -50%);
   }
 
@@ -157,7 +169,40 @@
     }
   }
 }
+@include respond-to($lg){
+  .section-banner{
+    .line{
+      &_1 {
+        left: 3%;
+      }
 
-@include respond-to($md){
+      &_2 {
+        left: 67%;
+      }
 
+      &_3 {
+        right: 4.5%;
+      }
+    }
+  }
 }
+@include respond-to($md){
+  .section-banner{
+    padding-top: 136px;
+    padding-bottom: 75px;
+    .line{
+      &_1 {
+        left: 8.25%;
+      }
+
+      &_2 {
+        left: 73%;
+      }
+
+      &_3 {
+        right: 7%;
+      }
+    }
+  }
+}
+

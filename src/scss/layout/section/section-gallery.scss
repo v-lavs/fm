@@ -158,8 +158,40 @@
 }
 
 @include respond-to($md) {
+  .section-gallery {
+    padding-top: 75px;
+  }
   .slider-process {
     max-width: 303px;
     width: 100%;
+
+    &__nav {
+      bottom: -90px;
+      right: 40px;
+    }
+  }
+}
+@include respond-to($sm) {
+  .section-gallery {
+    &:before {
+      background-position: center;
+      top: 150px;
+    }
+    }
+}
+@include respond-to($xs) {
+  .section-gallery {
+    &:before {
+
+    }
+  }
+  .slider-process {
+    width: 248px;
+  }
+  .process-slide {
+    height: 188px;
+  }
+  .slider-process__nav {
+    right: 83px;
   }
 }

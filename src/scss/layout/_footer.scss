@@ -54,3 +54,28 @@
     text-align: center;
   }
 }
+
+@include respond-to($xs) {
+  .footer {
+    padding-bottom: 80px;
+    padding-top: 65px;
+    .part {
+      width: 100%;
+    }
+
+    .d-flex {
+      flex-wrap: wrap;
+    }
+
+    &__wrap-btn {
+      padding-top: 7px;
+    }
+  }
+  .social-bar {
+    justify-content: center;
+  }
+  .social-bar__item {
+    margin: 0 9px;
+  }
+
+}

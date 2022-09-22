@@ -13,9 +13,20 @@
     &:first-child {
       margin-left: 0;
     }
-    &:hover, &:focus{
+
+    &:hover, &:focus {
       -webkit-text-stroke: .5px #ffffff;
       opacity: .8;
+    }
+  }
+
+  @include respond-to($md) {
+    .menu__item {
+      margin-left: 34px;
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
   }
 }

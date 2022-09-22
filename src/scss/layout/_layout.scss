@@ -6,10 +6,10 @@
   margin: 0 auto;
 
   @include respond-to($md) {
-    max-width: 720px
+    max-width: 540px
   }
 
   @include respond-to($xs) {
-    max-width: 320px;
+    max-width: 420px;
   }
 }
