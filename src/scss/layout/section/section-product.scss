@@ -136,6 +136,10 @@
 @include respond-to($xl) {
  .section-product{
    font-size: 16px;
+   &:before{
+     background-size: contain;
+   }
+
    &__img-wrap{
      height: 450px;
    }

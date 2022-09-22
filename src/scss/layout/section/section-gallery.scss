@@ -146,6 +146,10 @@
 }
 
 @include respond-to($lg) {
+  .section-gallery{}
+  &:before{
+     background-size: auto;
+  }
   .process-slide {
     &__label_top {
       transform: translateX(-25%);
