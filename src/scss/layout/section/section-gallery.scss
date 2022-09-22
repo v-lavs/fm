@@ -188,7 +188,23 @@
       background-position: center;
       top: 150px;
     }
+    .title{
+      padding: 0;
+    }
   }
+  .slider-process {
+    width: 248px;
+    &__nav {
+      right: 174px;
+    }
+  }
+  .process-slide {
+    height: 188px;
+  }
+  .process-slide:nth-of-type(odd) {
+    margin-top: 60px;
+  }
+
 }
 
 @include respond-to($xs) {
@@ -197,13 +213,8 @@
 
     }
   }
-  .slider-process {
-    width: 248px;
-  }
-  .process-slide {
-    height: 188px;
-  }
+
   .slider-process__nav {
-    right: 83px;
+    right: 36px;
   }
 }

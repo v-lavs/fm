@@ -18,12 +18,15 @@ $(document).ready(function () {
         centeredSlides: true,
         initialSlide: 2,
         slidesPerView: 1,
-        spaceBetween: 26,
+        spaceBetween: 36,
         navigation: {
             nextEl: "#slider-process-next",
             prevEl: "#slider-process-prev",
         },
         breakpoints: {
+           580: {
+               spaceBetween: 26,
+            },
             993: {
                 slidesPerView: 3,
             }

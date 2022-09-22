@@ -187,7 +187,11 @@
     }
   }
 }
-
+@media screen and (max-width: 720px) {
+  .section-product__img-wrap {
+    right: 10%;
+  }
+}
 @include respond-to($xs) {
   .section-product {
     padding-top: 95px;
