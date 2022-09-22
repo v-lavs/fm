@@ -161,6 +161,16 @@
   .section-gallery {
     padding-top: 75px;
   }
+  .process-slide__label_top {
+    transform: translateX(25%);
+    left: auto;
+    top: -28px;
+  }
+  .process-slide__label_bottom {
+    transform: translateX(25%);
+    right: auto;
+    left: 0;
+  }
   .slider-process {
     max-width: 303px;
     width: 100%;
@@ -171,14 +181,16 @@
     }
   }
 }
+
 @include respond-to($sm) {
   .section-gallery {
     &:before {
       background-position: center;
       top: 150px;
     }
-    }
+  }
 }
+
 @include respond-to($xs) {
   .section-gallery {
     &:before {
