@@ -224,6 +224,7 @@
 @include respond-to($xs) {
   .section-banner {
     padding-bottom: 194px;
+
     &__content {
       padding-bottom: 270px;
     }
