@@ -4,10 +4,11 @@
   right: 0;
   top: 0;
   background-color: transparent;
-  padding: 50px 0;
+  padding: 40px 0;
   display: flex;
   align-items: center;
   z-index: 10;
+
   &__logo {
     position: absolute;
     left: 50%;
@@ -16,15 +17,31 @@
     width: 86px;
     margin-bottom: 18px;
     display: inline-block;
-    img{
+
+    img {
       max-width: 100%;
       height: auto;
     }
   }
+
   @include respond-to($md) {
-    .container{
+    .container {
       max-width: 100%;
       padding: 0 28px;
+    }
+  }
+  @media screen and (max-width: 715px) {
+    padding: 34px 0 28px;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__logo {
+      position: static;
+      transform: none;
+      margin-bottom: 18px;
     }
   }
 }

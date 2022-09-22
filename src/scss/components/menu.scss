@@ -20,6 +20,11 @@
     }
   }
 
+  &__link {
+    display: inline-block;
+    padding: 10px 0;
+  }
+
   @include respond-to($md) {
     .menu__item {
       margin-left: 34px;
@@ -27,6 +32,11 @@
       &:first-child {
         margin-left: 0;
       }
+    }
+  }
+  @media screen and (max-width: 715px) {
+    &__link {
+      padding: 5px 0;
     }
   }
 }
