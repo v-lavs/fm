@@ -30,14 +30,14 @@ $(document).ready(function () {
         }
     });
 
-    function scroll_page(){
-        if(window.innerWidth <= 768){
-            if(window.innerHeight > window.innerWidth){
-                $.scrollify.destroy();
-            }
-        }
-        else{
-            $(function() {
+    // function scroll_page(){
+    //     if(window.innerWidth <= 768){
+    //         // if(window.innerHeight > window.innerWidth){
+    //             $.scrollify.destroy();
+    //         // }
+    //     }
+    //     else{
+    //         $(function() {
                 $.scrollify({
                     section: ".js-scroll-section",
                     interstitialSection: "",
@@ -49,11 +49,11 @@ $(document).ready(function () {
                     standardScrollElements: "",
                     touchScroll: true,
                 });
-            });
-        }
-    }
+    //         });
+    //     }
+    // }
 
-    window.addEventListener('resize', function(event){
+    window.addEventListener('load, resize', function(event){
         scroll_page();
     });
 
