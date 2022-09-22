@@ -140,16 +140,18 @@
 
     &__label_bottom {
       bottom: -20px;
-      left: -17%;
+      left: auto;
+      right: 17%;
       transform: translateX(100%);
     }
   }
 }
 
 @include respond-to($lg) {
-  .section-gallery{}
-  &:before{
-     background-size: auto;
+  .section-gallery {
+  }
+  &:before {
+    background-size: auto;
   }
   .process-slide {
     &__label_top {
@@ -193,12 +195,14 @@
       background-position: center;
       top: 150px;
     }
-    .title{
+
+    .title {
       padding: 0;
     }
   }
   .slider-process {
     width: 248px;
+
     &__nav {
       right: 174px;
     }

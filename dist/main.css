@@ -899,6 +899,26 @@ body.modal_open {
   margin-left: 46px;
 }
 
+.menu__item .sub-menu {
+  z-index: -1;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  box-shadow: 0 2px 50px 2px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  margin-top: 10px;
+  padding: 24px 20px 20px;
+  transition: all 0.35s ease;
+  border-radius: 0 0 5px 5px;
+  transform: translateY(15px);
+  cursor: default;
+  text-align: left;
+}
+
+.menu__item .sub-menu > li {
+  margin: 0 0 15px 0;
+}
+
 .menu__item:first-child {
   margin-left: 0;
 }
@@ -909,9 +929,42 @@ body.modal_open {
   opacity: .8;
 }
 
+.menu__item:hover > .sub-menu {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+
+.menu__item:hover > .menu__link:before {
+  transform: translateY(-50%) rotate(180deg);
+}
+
 .menu__link {
   display: inline-block;
   padding: 10px 0;
+}
+
+.dropdown > .menu__link {
+  position: relative;
+  padding-right: 26px;
+}
+
+.dropdown > .menu__link:before {
+  position: absolute;
+  display: block;
+  content: '';
+  background-image: url(../assets/img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 13px;
+  height: 8px;
+  top: 50%;
+  transform-origin: 50% 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 1;
 }
 
 .btn {
@@ -2380,7 +2433,8 @@ img.mfp-img {
 
   .process-slide__label_bottom {
     bottom: -20px;
-    left: -17%;
+    left: auto;
+    right: 17%;
     transform: translateX(100%);
   }
 }
