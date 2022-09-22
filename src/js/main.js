@@ -38,10 +38,8 @@ $(document).ready(function () {
         breakpoints: {
             580: {
                 spaceBetween: 26,
+                slidesPerView: 'auto'
             },
-            993: {
-                slidesPerView: 3,
-            }
         }
     });
 
