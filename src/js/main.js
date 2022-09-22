@@ -2,7 +2,8 @@
 * to include js file write: `//= include ./path-to-file`
 * */
 
-//= include ../../node_modules/jquery/dist/jquery.js ;
+//= include ../lib/jquery.min.js ;
+// = include ../lib/jquery.easing.min.js ;
 //= include ../lib/swiper/swiper-bundle.min.js
 //= include ../lib/scrollify.js
 //= include ../lib/lightbox.js
@@ -13,7 +14,6 @@
 
 $(document).ready(function () {
     let sliderProcess = new Swiper(".slider-process", {
-        // loop: true,
         speed: 900,
         centeredSlides: true,
         initialSlide: 2,
@@ -33,13 +33,21 @@ $(document).ready(function () {
     $.scrollify({
         section: ".js-scroll-section",
         interstitialSection: "",
-        easing: "easeOutExpo",
+        easing:"easeOutQuad",
+        // easing: "easeOutExpo",
         scrollSpeed: 1100,
         scrollbars: true,
         setHeights: false,
         standardScrollElements: "",
         touchScroll: true,
     });
+    $(".menu__link").on("click",function() {
+        $.scrollify.move($(this).attr("href"));
+    });
+
+    $(".menu__link").on("click",$.scrollify.move);
+
+
 
     const items = $('.process-slide__thumb').toArray().map(function (item) {
         const type = $(item).attr('data-type');
