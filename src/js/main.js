@@ -53,9 +53,9 @@ $(document).ready(function () {
     //     }
     // }
 
-    window.addEventListener('load, resize', function(event){
-        scroll_page();
-    });
+    // window.addEventListener('load, resize', function(event){
+    //     scroll_page();
+    // });
 
     const items = $('.process-slide__thumb').toArray().map(function (item) {
         const type = $(item).attr('data-type');
