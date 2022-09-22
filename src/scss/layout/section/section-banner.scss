@@ -171,7 +171,18 @@
     }
   }
 }
-
+@include respond-to($xl) {
+ .section-banner{
+   .title{
+     color: red;
+     font-size: 58px;
+     margin-bottom: 60px;
+   }
+   .btn_main{
+     margin-bottom: 100px;
+   }
+ }
+}
 @include respond-to($lg) {
   .section-banner {
     .line {

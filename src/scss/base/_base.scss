@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font: 400 14px/1.54 $main-font;
   height: 100%;
@@ -21,7 +25,7 @@ body {
   border: 0;
 }
 
-.text_dark{
+.text_dark {
   color: #023659;
 }
 
@@ -37,7 +41,11 @@ body {
     font-size: 32px;
     line-height: 1.6;
   }
-  @include respond-to($xs){
+
+  @include respond-to($xl) {
+    font-size: 60px;
+  }
+  @include respond-to($xs) {
     font-size: 40px;
   }
 }
@@ -83,7 +91,7 @@ body {
 }
 
 @include respond-to($md) {
-  .section{
+  .section {
     min-height: 0;
   }
 }
