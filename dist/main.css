@@ -864,7 +864,7 @@ body.modal_open {
   border: 2px solid rgba(255, 255, 255, 0.6);
   border-radius: 50%;
   background-color: transparent;
-  transition: .35s;
+  transition: .5s;
 }
 
 .social-bar__item:hover,
@@ -908,7 +908,7 @@ body.modal_open {
   width: max-content;
   margin-top: 10px;
   padding: 24px 20px 20px;
-  transition: all 0.35s ease;
+  transition: all 0.5s ease;
   border-radius: 0 0 8px 8px;
   transform: translateY(15px);
   cursor: default;
@@ -983,18 +983,38 @@ body.modal_open {
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 25px;
-  transition: .35s;
+  transition: .5s;
 }
 
 .btn:hover,
 .btn:focus {
+  transition: .5s;
   border-color: #023659;
   background-color: #023659;
-  background-image: none;
 }
 
 .btn_main {
-  background-image: linear-gradient(-56deg, #f7941e 7%, #f57825 33%, #f24f31 77%, #f23f36 100%);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn_main:before {
+  position: absolute;
+  content: '';
+  background: linear-gradient(-56deg, #f7941e 7%, #f57825 33%, #f24f31 77%, #f23f36 100%);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 1;
+  transition: .5s;
+}
+
+.btn_main:hover:before,
+.btn_main:focus:before {
+  opacity: 0;
 }
 
 .btn_stroke {
@@ -1410,7 +1430,7 @@ img.mfp-img {
   cursor: pointer;
 }
 
-.mfp-image-holder .mfp-close {
+.mfp-content .mfp-close {
   width: 28px;
   height: 28px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
@@ -1434,13 +1454,69 @@ img.mfp-img {
   box-shadow: 0 0 27px 27px rgba(0, 0, 0, 0.3);
 }
 
+.mfp-container {
+  padding: 0 8%;
+}
+
 .mfp-bg {
-  opacity: .3;
+  background-color: #1a1a1a;
+  opacity: 0.7;
 }
 
 .mfp-figure {
   border-radius: 12px;
   overflow: hidden;
+}
+
+.mfp-wrap .mfp-arrow {
+  width: 75px;
+  height: 75px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  opacity: .3;
+  transition: .5s;
+}
+
+.mfp-wrap .mfp-arrow:hover,
+.mfp-wrap .mfp-arrow:focus {
+  opacity: .7;
+}
+
+.mfp-wrap .mfp-arrow-right {
+  right: 3%;
+}
+
+.mfp-wrap .mfp-arrow-left {
+  left: 3%;
+}
+
+.mfp-wrap .mfp-arrow:before,
+.mfp-wrap .mfp-arrow:after {
+  border: none;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 37px;
+  height: 42px;
+  background-image: url(../assets/img/arrow-right.svg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.mfp-wrap .mfp-arrow-left:before,
+.mfp-wrap .mfp-arrow-left:after {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.mfp-iframe-holder .mfp-content {
+  max-width: 1025px;
+}
+
+.mfp-iframe-scaler iframe {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .container {
@@ -1859,7 +1935,7 @@ img.mfp-img {
   border-radius: 50%;
   right: 20px;
   bottom: -100px;
-  transition: .35s;
+  transition: .5s;
 }
 
 .slider-process__nav:hover,
