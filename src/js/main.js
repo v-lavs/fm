@@ -43,7 +43,7 @@ $(document).ready(function () {
         }
     });
 
-    function scroll_page() {
+    function scrollPage() {
         if (window.innerWidth <= 768) {
             if (window.innerHeight > window.innerWidth) {
                 $.scrollify.destroy();
@@ -62,14 +62,14 @@ $(document).ready(function () {
             });
         }
     }
+    scrollPage();
 
-    $(window).on('load', function () {
-        scroll_page();
+    let resizeScrollify;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeScrollify);
+       resizeScrollify = setTimeout(scrollPage, 500);
     });
 
-    $(window).resize(function () {
-        scroll_page();
-    });
 
 
     const $galleryThumbs = $('.process-slide__thumb');
