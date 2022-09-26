@@ -419,8 +419,8 @@ img.mfp-img {
 
 @media all and (max-width: 900px) {
   .mfp-arrow {
-    -webkit-transform: scale(0.75);
-    transform: scale(0.75);
+    //-webkit-transform: scale(0.75);
+    //transform: scale(0.75);
   }
   .mfp-arrow-left {
     -webkit-transform-origin: 0;
@@ -473,6 +473,7 @@ img.mfp-img {
 .mfp-figure {
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 0 27px 27px rgba(0, 0, 0, .30);
 }
 
 .mfp-wrap {
@@ -520,8 +521,11 @@ img.mfp-img {
 }
 
 .mfp-iframe-holder {
+  box-shadow: 0 0 27px 27px rgba(0, 0, 0, .30);
+
   .mfp-content {
     max-width: 1025px;
+    width: 90%;
   }
 }
 
@@ -529,5 +533,45 @@ img.mfp-img {
   iframe {
     overflow: hidden;
     border-radius: 12px;
+  }
+}
+
+@include respond-to($md) {
+  .mfp-iframe-holder {
+    .mfp-content {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .mfp-container {
+    padding: 0 8%;
+  }
+  .mfp-wrap {
+    .mfp-arrow {
+      width: 59px;
+      height: 59px;
+      transform: translateY(50%);
+    }
+  }
+}
+
+@include respond-to($sm) {
+  .mfp-iframe-holder {
+    .mfp-content {
+      max-width: 549px;
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mfp-wrap {
+    .mfp-arrow {
+      width: 30px;
+      height: 30px;
+      transform: translateY(100%);
+    }
   }
 }
