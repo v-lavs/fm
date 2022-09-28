@@ -79,7 +79,7 @@
       left: -7px;
       transform: translate(-100%, -100%);
       bottom: 43px;
-      width: 167px;
+      width: 168px;
       height: 91px;
       border-radius: 45px;
       top: 35%;
@@ -97,10 +97,10 @@
     &_4 {
       right: -66px;
       bottom: 0;
-      transform: translate(100%, -55%);
+      transform: translate(100%, -68%);
       border-radius: 50%;
-      width: 111px;
-      height: 110px;
+      width: 131px;
+      height: 131px;
       border: 20px solid rgba(255, 255, 255, .2);
       box-shadow: 0 0 0 25px rgba(255, 255, 255, .1);
     }
@@ -117,8 +117,8 @@
 
   .banner-img-wrap_3 {
     position: static;
-    width: 494px;
-    height: 268px;
+    width: 496px;
+    height: 270px;
     border-radius: 135px;
     margin: 0 auto;
   }
@@ -165,23 +165,32 @@
       height: 238px;
     }
 
+    .banner-img-wrap_4 {
+      width: 111px;
+      height: 110px;
+      transform: translate(100%, -55%);
+    }
+
     .banner-img-wrap_5 {
       width: 266px;
       height: 145px;
     }
   }
 }
+
 @include respond-to($xl) {
- .section-banner{
-   .title{
-     font-size: 58px;
-     margin-bottom: 60px;
-   }
-   .btn_main{
-     margin-bottom: 100px;
-   }
- }
+  .section-banner {
+    .title {
+      font-size: 58px;
+      margin-bottom: 60px;
+    }
+
+    .btn_main {
+      margin-bottom: 100px;
+    }
+  }
 }
+
 @include respond-to($lg) {
   .section-banner {
     .line {
