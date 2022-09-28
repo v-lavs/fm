@@ -2098,7 +2098,7 @@ img.mfp-img {
   }
 }
 
-@media screen and (max-width: 1024px) and (orientation: portrait) {
+@media screen and (max-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
   .section {
     min-height: 0;
     padding: 100px 0;
