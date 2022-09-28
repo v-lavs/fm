@@ -9,6 +9,7 @@
     line-height: 1;
     font-weight: 600;
     margin-left: 46px;
+    transition: opacity .5s;
 
     .sub-menu {
       z-index: -1;
@@ -41,7 +42,6 @@
     }
 
     &:hover, &:focus {
-      -webkit-text-stroke: .5px #ffffff;
       opacity: .8;
     }
 
