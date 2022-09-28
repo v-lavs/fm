@@ -2072,6 +2072,21 @@ img.mfp-img {
   }
 }
 
+@media screen and (max-height: 1366px) and (orientation: portrait), (min-width: 1921px) {
+  .section {
+    min-height: 0;
+    padding: 150px 0;
+  }
+
+  .section-banner {
+    padding-bottom: 100px;
+  }
+
+  .section-gallery {
+    padding-top: 100px;
+  }
+}
+
 @media only screen and (max-width: 1200px) {
   .section-banner .line_1 {
     left: 3%;
@@ -2516,21 +2531,6 @@ img.mfp-img {
 
   .section-product:nth-of-type(odd):before {
     right: -4px;
-  }
-}
-
-@media screen and (max-height: 1366px) and (orientation: portrait), (min-height: 1081px) {
-  .section {
-    min-height: 0;
-    padding: 150px 0;
-  }
-
-  .section-banner {
-    padding-bottom: 100px;
-  }
-
-  .section-gallery {
-    padding-top: 100px;
   }
 }
 
