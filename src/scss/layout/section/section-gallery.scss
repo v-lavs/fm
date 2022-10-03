@@ -134,7 +134,7 @@
   }
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 768px) and (orientation: landscape) {
   .process-slide {
     &__label_top {
       transform: translateX(-15%);
